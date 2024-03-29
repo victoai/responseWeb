@@ -28,13 +28,19 @@
             display: flex;
             justify-content: space-between;
 
+            position: relative;
+
            }
 
            .trigger{
             display: none;
+            position: absolute;
+            right: 10px;
+            top:0px
            }
 
 
+         
 
            .inner div{
             border:1px solid black;
@@ -48,6 +54,7 @@
            }
 
 
+           /* */
             header{
                 height: auto;
             }
@@ -57,24 +64,18 @@
                 flex-direction: column;
                 position: relative;               
             }
- 
-       
-         
-            .trigger{
-                position: absolute;
-                right: 10px;
-                top:0px
-            }
+  
 
-
-
-            /*  추가  */
+           
+            /*  gnb  sns 영역 안보이기 */
             .gnb ,  .sns{
-                text-align: center;
+               
                 display: none;
             }
 
-            .gnb.on ,  .sns.on{                
+             /*  gnb  sns 영역 안보이기 */
+            .gnb.on ,  .sns.on{    
+                text-align: center;            
                 display: block;
             }
 

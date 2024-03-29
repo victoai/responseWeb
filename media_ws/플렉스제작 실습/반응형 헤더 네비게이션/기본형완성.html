@@ -36,13 +36,16 @@
             /*border :1px solid black;*/
             display: flex;
             justify-content: space-between; 
+
+            position: relative;   
         }
 
 
-        .gnb{
+        /* 메뉴가 옆으로 나오게 */
+        .gnb , .sns{
             display: flex;
             flex-direction: row;            
-        }
+        } 
 
 
         .gnb li{ padding-right: 5px;}
@@ -52,13 +55,26 @@
 
            .trigger{
             display: none;
+            position: absolute;
+            right: 10px;
+            top:0px
            }
  
+           
+         
+           /*
+           
+           반응형코드
+           1.  (햄버거 아이콘)트리거영역 보이기 
+           2.  헤더의 높이를 auto 로 설정 ( content만큼으로 높이가 정해짐)
+           3.  inner영역의 flex방향을 컬럼( 세로) 변경
+           4.  메뉴영역의 flex방향을 컬럼(세로) 변경
+           5.  sns영역의  내용을 가운데 정렬
+           */
 
            /*  미디어 쿼리  */
 
            @media screen and ( max-width: 768px) {
-
             
             /*햄버거 아이콘 보이기*/
            .trigger{
@@ -74,12 +90,24 @@
 
             .inner{
                 width: 100%;
-                flex-direction: column; 
-                position: relative;                   
+                flex-direction: column;  
             }
 
 
-            .gnb {
+
+            .sns a{ 
+                padding-right: 5px;
+            }
+
+
+            .gnb, .sns{
+                display: none;  
+            }
+
+            
+
+            
+            .gnb.on {
                 display: flex; 
                 flex-direction: column;             
                 text-align: center;                
@@ -90,38 +118,17 @@
                 padding-bottom: 10px;                 
                 margin-top: 10px;
             }
-            
              
-
-            .sns{
+             .sns.on{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                padding: 10px;
-            }
-
-            .sns a{
-
-                padding-right: 5px;
-            }
-
-            .gnb, .sns{
-                display: none;  
-            }
-
-            
-            .gnb.on, .sns.on{
-                display: flex;
+                padding: 10px;                 
                 background-color: rgb(168, 168, 199);
                 /*border:1px solid red;  */
             }
 
 
-            .trigger{
-                position: absolute;
-                right: 10px;
-                top:0px
-            }
 
            }
     </style>

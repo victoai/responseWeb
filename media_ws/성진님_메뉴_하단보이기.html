@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        ul{
+            list-style:none;
+
+        }
+
+        .wrap{
+          
+            border:1px solid black;
+            display: flex;            
+        }
+
+        .wrap > div{
+            border: 1px solid black;
+            width: 50%;
+            height: 60px;
+            background-color: red;
+        }
+
+        .h_menu{      
+
+            position: absolute;
+            left:0px;
+            bottom: -60px;
+            background-color: blue;          
+            width: 100%;
+            height: 60px; 
+         
+        }
+
+
+        .menu{          
+           
+            position: relative;
+            height: 60px;
+        }
+
+        .menu:hover .h_menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <div >a</div>
+        <div class="menu">bbbb            
+            <ul  class="h_menu">
+                <li>숨김메뉴</li>
+                <li>숨김메뉴</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -25,22 +25,37 @@
             display: flex;
             justify-content: space-between;
 
+            
+            position: relative;
+
            }
 
+               /*  inner 영역을 기준으로 오른쪽에 끝에 붙이기*/
            .trigger{
             display: none;
+            position: absolute;
+            right: 10px;
+            top:0px
            }
+ 
+
+        
 
 
 
-           .inner div{
-            border:1px solid black;
-           }
 
 
+           /*
+           
+           반응형코드
+           1.  (햄버거 아이콘)트리거영역 보이기 
+           2.  헤더의 높이를 auto 로 설정 ( content만큼으로 높이가 정해짐)
+           3.  inner영역의 flex방향을 컬럼( 세로) 변경
+           */
 
            @media screen and ( max-width: 768px) {
-           .trigger{
+          
+            .trigger{
             display: block;
            }
 
@@ -50,23 +65,17 @@
             }
 
             
+            /*  메뉴가 세로 방향으로 나오게 방향을 바꾼다*/
             .inner{
                 width: 100%;
                 flex-direction: column;
-                position: relative;               
+                             
             }
  
             .gnb ,  .sns{
                 text-align: center;
             }
          
-
-            /*  inner 영역을 기준으로 오른쪽에 끝에 붙이기*/
-            .trigger{
-                position: absolute;
-                right: 10px;
-                top:0px
-            }
 
 
            }
