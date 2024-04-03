@@ -54,6 +54,8 @@ section {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+ 
 }
 
 /* 하나의 item의 크기*/
@@ -68,6 +70,8 @@ section {
 /* 이미지의 크기는 item너비와 동일하게 */
 .item img {
   width: 100%;
+
+   
 }
 .item h4 {
   font-size: 16px;
@@ -112,7 +116,7 @@ section {
 /* 모바일 */
 @media (max-width: 767px) {
   section {
-    width: 100vw;    /* 1200px  -> 100% */
+    width: 100%;    /* 1200px  -> 100% */
     padding: 15px;
     box-sizing: border-box;
   }

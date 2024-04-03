@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+
+    
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+        .wrap{
+            width: 950px;
+            border:1px solid black;
+            
+        }
+
+        .search-wrap{
+            display: flex;
+            justify-content: space-between;
+           
+            background-color: antiquewhite;
+        }
+
+        .gnb{
+           text-align: right;
+           background-color: azure;
+           padding: 20px;
+        }
+
+
+        .item{
+            width: 310px;
+            height: 200px;
+            overflow: hidden; 
+            
+            margin-bottom: 10px;
+
+            position: relative;
+        }
+
+        .item img{
+            width: 100%;
+        }
+
+        .item:hover  .desc{
+            bottom: 0px;
+
+
+        }
+
+
+        .desc{
+
+            position: absolute;
+            height: 60px;
+            width: 100%;
+
+            bottom: -60px;
+            background-color:  antiquewhite;
+            opacity: .6;
+
+            transition: 1s;
+            padding: 5px;
+            box-sizing: border-box;
+
+        }
+
+        .items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+         
+        }
+
+
+        .search-wrap input{
+            background: url(images/search.png) no-repeat   right;
+            height: 30px;
+            width: 300px;
+            padding: 5px;
+            background-size: 22px;
+             
+            border: none;
+            border-bottom: 1px solid rgb(183, 169, 169);
+            outline: none;
+        }
+
+        .search-wrap button{
+           
+            font-size: 18px;
+            padding: 13px 60px;
+            border-radius: 6px;
+            border: none;
+             
+
+            transition: 1s;
+        }
+
+        .search-wrap button:hover{
+            background-color: black;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+
+        <div class="gnb">
+            <a href="#none">Photoshop</a>
+            <a href="#none">Illustrator</a>
+            <a href="#none">Publishing</a>
+        </div>
+
+      <div class="search-wrap">
+        <input type="text" placeholder="Search">
+        <button>Designer Profile</button>
+      </div>
+
+
+      <div class="items">
+
+        <div class="item">
+            <img src="images/p2.jpg">
+            <!--hidden 영역-->
+            <div class="desc">
+                <h6>Image Title</h6>
+                <div class="like">
+                    <span>
+                        <i class="fa fa-heart"></i> 300 Likes
+                    </span>						
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/p2.jpg">
+            <!--hidden 영역-->
+            <div class="desc">
+                <h6>Image Title</h6>
+                <div class="like">
+                    <span>
+                        <i class="fa fa-heart"></i> 300 Likes
+                    </span>						
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <img src="images/p2.jpg">
+            <!--hidden 영역-->
+            <div class="desc">
+                <h6>Image Title</h6>
+                <div class="like">
+                    <span>
+                        <i class="fa fa-heart"></i> 300 Likes
+                    </span>						
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="images/p2.jpg">
+            <!--hidden 영역-->
+            <div class="desc">
+                <h6>Image Title</h6>
+                <div class="like">
+                    <span>
+                        <i class="fa fa-heart"></i> 300 Likes
+                    </span>						
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+</body>
+</html>
